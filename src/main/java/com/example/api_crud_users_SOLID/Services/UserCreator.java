@@ -24,13 +24,12 @@ public class UserCreator {
             throw new EmailAlreadyExistsException("Email already exists");
         }
 
-        User user = new User(request.id(),new UserName(request.name()),email);
+        User user = new User(new UserName(request.name()),email);
         return toResponse(userRepository.create(user));
     }
 
     private UserResponse toResponse(User user) {
         return new UserResponse(
-                user.getId(),
                 user.getName(),
                 user.getEmail()
         );

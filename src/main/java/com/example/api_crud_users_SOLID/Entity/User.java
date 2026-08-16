@@ -5,15 +5,13 @@ import com.example.api_crud_users_SOLID.ValueObjects.UserName;
 
 public class User {
 
-    private Long id;
     private UserName name;
     private Email email;
 
     public User() {
     }
 
-    public User(Long id, UserName name, Email email) {
-        this.id = id;
+    public User(UserName name, Email email) {
         this.name = name;
         this.email = email;
     }
@@ -26,7 +24,4 @@ public class User {
         return email;
     }
 
-    public Long getId() {
-        return id;
-    }
 }
