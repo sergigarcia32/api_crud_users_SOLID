@@ -6,12 +6,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
 public class UserSaveInMemory implements UserRepository{
     private final Map<Email, User> users = new HashMap<>();
-    private final AtomicLong idGenerator = new AtomicLong();
 
     public User create(User user) {
 
@@ -22,6 +20,10 @@ public class UserSaveInMemory implements UserRepository{
 
     public boolean existsByEmail(Email email){
         return users.containsKey(email);
+    }
+
+    public User findByEmail(Email email) {
+        return users.get(email);
     }
 
 }
