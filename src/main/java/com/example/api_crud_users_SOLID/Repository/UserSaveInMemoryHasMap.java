@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Repository
-public class UserSaveInMemory implements UserRepository{
+public class UserSaveInMemoryHasMap implements UserRepository{
     private final Map<Email, User> users = new HashMap<>();
 
     public User create(User user) {
@@ -16,6 +16,10 @@ public class UserSaveInMemory implements UserRepository{
         users.put(user.getEmail(), user);
 
         return user;
+    }
+
+    public void remove(Email email) {
+        users.remove(email);
     }
 
     public boolean existsByEmail(Email email){

@@ -1,11 +1,7 @@
 package com.example.api_crud_users_SOLID.Controllers;
 
-import com.example.api_crud_users_SOLID.Exception.EmailAlreadyExistsException;
-import com.example.api_crud_users_SOLID.Services.FindUser;
-import com.example.api_crud_users_SOLID.Services.UserCreator;
+import com.example.api_crud_users_SOLID.Services.UserFinder;
 import com.example.api_crud_users_SOLID.dto.ErrorResponse;
-import com.example.api_crud_users_SOLID.dto.FindUserRequest;
-import com.example.api_crud_users_SOLID.dto.UserRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api")
 public class UserGetController {
-    private final FindUser findUser;
+    private final UserFinder findUser;
 
-    public UserGetController(FindUser findUser) {
+    public UserGetController(UserFinder findUser) {
         this.findUser = findUser;
     }
 
@@ -24,7 +20,7 @@ public class UserGetController {
 
         try {
             return ResponseEntity
-                    .status(HttpStatus.ACCEPTED)
+                    .status(HttpStatus.OK)
                     .body(this.findUser.find(email));
 
         } catch (RuntimeException e) {

@@ -1,30 +1,26 @@
 package com.example.api_crud_users_SOLID.Services;
 
 import com.example.api_crud_users_SOLID.Entity.User;
-import com.example.api_crud_users_SOLID.Exception.EmailAlreadyExistsException;
 import com.example.api_crud_users_SOLID.Repository.UserRepository;
 import com.example.api_crud_users_SOLID.ValueObjects.Email;
-import com.example.api_crud_users_SOLID.ValueObjects.UserName;
 import com.example.api_crud_users_SOLID.dto.FindUserRequest;
 import com.example.api_crud_users_SOLID.dto.FindUserResponse;
-import com.example.api_crud_users_SOLID.dto.UserRequest;
-import com.example.api_crud_users_SOLID.dto.UserResponse;
 import org.springframework.stereotype.Service;
 
 @Service
-public class FindUser {
+public class UserFinder {
 
     private final UserRepository userRepository;
 
-    public FindUser(UserRepository userRepository) {
+    public UserFinder(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
     public FindUserResponse find(String email) {
         FindUserRequest request = new FindUserRequest(email);
-        Email userEemail = new Email(request.email());
+        Email userEmail = new Email(request.email());
 
-        User user = userRepository.findByEmail(userEemail);
+        User user = userRepository.findByEmail(userEmail);
 
         if (user == null) {
             throw new RuntimeException("User not found");
