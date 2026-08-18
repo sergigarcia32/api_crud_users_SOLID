@@ -20,10 +20,11 @@ public class FindUser {
         this.userRepository = userRepository;
     }
 
-    public FindUserResponse find(FindUserRequest request) {
-        Email email = new Email(request.email());
+    public FindUserResponse find(String email) {
+        FindUserRequest request = new FindUserRequest(email);
+        Email userEemail = new Email(request.email());
 
-        User user = userRepository.findByEmail(email);
+        User user = userRepository.findByEmail(userEemail);
 
         if (user == null) {
             throw new RuntimeException("User not found");

@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/getUser")
+@RequestMapping("/api")
 public class UserGetController {
     private final FindUser findUser;
 
@@ -19,14 +19,13 @@ public class UserGetController {
         this.findUser = findUser;
     }
 
-    @GetMapping
-    public ResponseEntity<?> find(
-            @RequestBody FindUserRequest request) {
+    @GetMapping("/getUser/{email}")
+    public ResponseEntity<?> find(@PathVariable String email) {
 
         try {
             return ResponseEntity
                     .status(HttpStatus.ACCEPTED)
-                    .body(this.findUser.find(request));
+                    .body(this.findUser.find(email));
 
         } catch (RuntimeException e) {
 
