@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository {
 
+    String getStorageType();
     boolean existsByEmail(Email email);
     User create(User user);
     void remove(Email email);

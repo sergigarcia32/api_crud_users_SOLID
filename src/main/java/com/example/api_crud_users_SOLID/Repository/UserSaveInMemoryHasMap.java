@@ -2,12 +2,17 @@ package com.example.api_crud_users_SOLID.Repository;
 
 import com.example.api_crud_users_SOLID.Entity.User;
 import com.example.api_crud_users_SOLID.ValueObjects.Email;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Repository
+@ConditionalOnProperty(
+        name = "user.storage",
+        havingValue = "HASH_MAP"
+)
 public class UserSaveInMemoryHasMap implements UserRepository{
     private final Map<Email, User> users = new HashMap<>();
 
@@ -20,6 +25,11 @@ public class UserSaveInMemoryHasMap implements UserRepository{
 
     public void remove(Email email) {
         users.remove(email);
+    }
+
+    @Override
+    public String getStorageType() {
+        return "Hash Map";
     }
 
     public boolean existsByEmail(Email email){
