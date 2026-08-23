@@ -1,4 +1,4 @@
-package com.example.api_crud_users_SOLID.persistence.Entity.Repository;
+package com.example.api_crud_users_SOLID.persistence.Repository;
 
 import com.example.api_crud_users_SOLID.persistence.Entity.User;
 import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.Email;

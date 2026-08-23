@@ -2,7 +2,7 @@ package com.example.api_crud_users_SOLID.Services;
 
 import com.example.api_crud_users_SOLID.persistence.Entity.User;
 import com.example.api_crud_users_SOLID.presentation.Controllers.Exception.EmailAlreadyExistsException;
-import com.example.api_crud_users_SOLID.persistence.Entity.Repository.UserRepository;
+import com.example.api_crud_users_SOLID.persistence.Repository.UserRepository;
 import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.Email;
 import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.UserName;
 import com.example.api_crud_users_SOLID.presentation.Controllers.dto.UserRequest;
