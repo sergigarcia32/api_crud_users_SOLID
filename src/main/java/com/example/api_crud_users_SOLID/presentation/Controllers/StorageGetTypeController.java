@@ -1,12 +1,10 @@
-package com.example.api_crud_users_SOLID.Controllers;
+package com.example.api_crud_users_SOLID.presentation.Controllers;
 
 import com.example.api_crud_users_SOLID.Services.GetStorageType;
-import com.example.api_crud_users_SOLID.Services.UserFinder;
-import com.example.api_crud_users_SOLID.dto.ErrorResponse;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

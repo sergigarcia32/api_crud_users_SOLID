@@ -1,4 +1,4 @@
-package com.example.api_crud_users_SOLID.Exception;
+package com.example.api_crud_users_SOLID.presentation.Controllers.Exception;
 
 public class EmailAlreadyExistsException extends RuntimeException {
 

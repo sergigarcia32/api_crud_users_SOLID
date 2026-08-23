@@ -1,10 +1,10 @@
 package com.example.api_crud_users_SOLID.Services;
 
-import com.example.api_crud_users_SOLID.Entity.User;
-import com.example.api_crud_users_SOLID.Repository.UserRepository;
-import com.example.api_crud_users_SOLID.ValueObjects.Email;
-import com.example.api_crud_users_SOLID.dto.FindUserRequest;
-import com.example.api_crud_users_SOLID.dto.FindUserResponse;
+import com.example.api_crud_users_SOLID.persistence.Entity.User;
+import com.example.api_crud_users_SOLID.persistence.Entity.Repository.UserRepository;
+import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.Email;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.FindUserRequest;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.FindUserResponse;
 import org.springframework.stereotype.Service;
 
 @Service

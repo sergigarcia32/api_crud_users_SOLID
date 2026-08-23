@@ -1,12 +1,12 @@
 package com.example.api_crud_users_SOLID.Services;
 
-import com.example.api_crud_users_SOLID.Entity.User;
-import com.example.api_crud_users_SOLID.Exception.EmailAlreadyExistsException;
-import com.example.api_crud_users_SOLID.Repository.UserRepository;
-import com.example.api_crud_users_SOLID.ValueObjects.Email;
-import com.example.api_crud_users_SOLID.ValueObjects.UserName;
-import com.example.api_crud_users_SOLID.dto.UserRequest;
-import com.example.api_crud_users_SOLID.dto.UserResponse;
+import com.example.api_crud_users_SOLID.persistence.Entity.User;
+import com.example.api_crud_users_SOLID.presentation.Controllers.Exception.EmailAlreadyExistsException;
+import com.example.api_crud_users_SOLID.persistence.Entity.Repository.UserRepository;
+import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.Email;
+import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.UserName;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.UserRequest;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.UserResponse;
 import org.springframework.stereotype.Service;
 
 @Service

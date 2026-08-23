@@ -1,4 +1,4 @@
-package com.example.api_crud_users_SOLID.ValueObjects;
+package com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects;
 
 public record Email(String value) {
 

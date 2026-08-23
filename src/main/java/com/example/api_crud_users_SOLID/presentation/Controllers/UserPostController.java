@@ -1,9 +1,9 @@
-package com.example.api_crud_users_SOLID.Controllers;
+package com.example.api_crud_users_SOLID.presentation.Controllers;
 
-import com.example.api_crud_users_SOLID.Exception.EmailAlreadyExistsException;
+import com.example.api_crud_users_SOLID.presentation.Controllers.Exception.EmailAlreadyExistsException;
 import com.example.api_crud_users_SOLID.Services.UserCreator;
-import com.example.api_crud_users_SOLID.dto.ErrorResponse;
-import com.example.api_crud_users_SOLID.dto.UserRequest;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.ErrorResponse;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.UserRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

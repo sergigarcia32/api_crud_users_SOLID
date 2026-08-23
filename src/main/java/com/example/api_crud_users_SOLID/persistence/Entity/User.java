@@ -1,7 +1,7 @@
-package com.example.api_crud_users_SOLID.Entity;
+package com.example.api_crud_users_SOLID.persistence.Entity;
 
-import com.example.api_crud_users_SOLID.ValueObjects.Email;
-import com.example.api_crud_users_SOLID.ValueObjects.UserName;
+import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.Email;
+import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.UserName;
 
 public class User {
 

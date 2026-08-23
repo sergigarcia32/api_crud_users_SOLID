@@ -1,7 +1,7 @@
-package com.example.api_crud_users_SOLID.Controllers;
+package com.example.api_crud_users_SOLID.presentation.Controllers;
 
 import com.example.api_crud_users_SOLID.Services.UserRemover;
-import com.example.api_crud_users_SOLID.dto.ErrorResponse;
+import com.example.api_crud_users_SOLID.presentation.Controllers.dto.ErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

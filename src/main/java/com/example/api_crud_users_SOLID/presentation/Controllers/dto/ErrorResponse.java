@@ -1,4 +1,4 @@
-package com.example.api_crud_users_SOLID.dto;
+package com.example.api_crud_users_SOLID.presentation.Controllers.dto;
 
 public record ErrorResponse(
         int code,

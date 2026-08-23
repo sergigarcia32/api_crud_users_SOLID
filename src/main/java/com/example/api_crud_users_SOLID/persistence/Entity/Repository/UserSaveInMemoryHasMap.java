@@ -1,7 +1,7 @@
-package com.example.api_crud_users_SOLID.Repository;
+package com.example.api_crud_users_SOLID.persistence.Entity.Repository;
 
-import com.example.api_crud_users_SOLID.Entity.User;
-import com.example.api_crud_users_SOLID.ValueObjects.Email;
+import com.example.api_crud_users_SOLID.persistence.Entity.User;
+import com.example.api_crud_users_SOLID.persistence.Entity.ValueObjects.Email;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Repository;
 
